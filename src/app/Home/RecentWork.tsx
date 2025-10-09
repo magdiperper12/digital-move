@@ -1,0 +1,117 @@
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+const works = [
+	'/image/image.jpg',
+	'/image/image.jpg',
+	'/image/image.jpg',
+	'/image/image.jpg',
+	'/image/image.jpg',
+	'/image/image.jpg',
+];
+
+export default function RecentWork() {
+	return (
+		<section className='w-full text-white py-16 sm:py-20 px-4 sm:px-6'>
+			{/* Title */}
+			<motion.h2
+				initial={{ opacity: 0, y: 50 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.8, ease: 'easeOut' }}
+				viewport={{ once: false, amount: 0.3 }}
+				className='text-4xl sm:text-6xl md:text-7xl font-extrabold mb-10 sm:mb-16 text-center'>
+				RECENT <span className='text-white'>WORK</span>
+				<span className='text-red-500'>.</span>
+			</motion.h2>
+
+			{/* Gallery */}
+			<div className='flex flex-col gap-10 sm:gap-16'>
+				{works.map((src, i) => {
+					const isEven = i % 2 === 0;
+
+					return (
+						<div
+							key={i}
+							className='grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl mx-auto items-center'>
+							{/* Even case */}
+							{isEven ? (
+								<>
+									{/* Image */}
+									<motion.div
+										initial={{
+											opacity: 0,
+											scale: 0.9,
+											y: 40,
+											filter: 'blur(15px)',
+										}}
+										whileInView={{
+											opacity: 1,
+											scale: 1,
+											y: 0,
+											filter: 'blur(0px)',
+										}}
+										transition={{
+											delay: 0.1,
+											duration: 0.7,
+											ease: 'easeOut',
+										}}
+										viewport={{ once: false, amount: 0.3 }}
+										className='relative w-full h-56 sm:h-72 rounded-xl overflow-hidden shadow-xl group'>
+										<Image
+											src={src}
+											alt={`work-${i}`}
+											fill
+											className='object-cover transition-transform duration-700 group-hover:scale-110'
+										/>
+										<div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500' />
+									</motion.div>
+
+									{/* Empty div (only desktop) */}
+									<div className='hidden md:block w-full h-72 rounded-xl bg-transparent'></div>
+								</>
+							) : (
+								<>
+									{/* Empty div (only desktop) */}
+									<div className='hidden md:block w-full h-72 rounded-xl bg-transparent'></div>
+
+									{/* Image */}
+									<motion.div
+										initial={{
+											opacity: 0,
+											scale: 0.9,
+											y: 40,
+											filter: 'blur(15px)',
+										}}
+										whileInView={{
+											opacity: 1,
+											scale: 1,
+											y: 0,
+											filter: 'blur(0px)',
+										}}
+										transition={{
+											delay: 0.1,
+											duration: 0.7,
+											ease: 'easeOut',
+										}}
+										viewport={{ once: false, amount: 0.3 }}
+										className='relative w-full h-56 sm:h-72 rounded-xl overflow-hidden shadow-xl group'>
+										<Image
+											src={src}
+											alt={`work-${i}`}
+											fill
+											className='object-cover transition-transform duration-700 group-hover:scale-110'
+										/>
+										<div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500' />
+									</motion.div>
+								</>
+							)}
+						</div>
+					);
+				})}
+			</div>
+		</section>
+	);
+}
