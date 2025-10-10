@@ -14,8 +14,8 @@ const Writer: FC = () => {
 					loop={0} // 0 معناها مرة واحدة بس
 					cursor
 					cursorStyle='|'
-					typeSpeed={70}
-					deleteSpeed={50}
+					typeSpeed={120}
+					deleteSpeed={90}
 					delaySpeed={5000}
 				/>
 			</h1>
