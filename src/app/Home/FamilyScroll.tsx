@@ -144,7 +144,7 @@ const InfiniteMarquee: React.FC = () => {
 					{[...testimonials, ...testimonials].map((item, idx) => (
 						<div
 							key={item.id + '-' + idx}
-							className='bg-[#00004e]  overflow-hidden w-[500px] h-[250px] scale-90 md:scale-100 shadow-lg p-6 rounded-2xl flex-shrink-0'>
+							className='bg-gray-900  overflow-hidden w-[500px] h-[250px] scale-90 md:scale-100 shadow-lg p-6 rounded-2xl flex-shrink-0'>
 							<div className='flex items-center gap-3 mb-3'>
 								<Image
 									src={item.image}

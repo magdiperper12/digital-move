@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Services = () => {
 	const listVariants = {
@@ -19,7 +20,7 @@ const Services = () => {
 	};
 
 	return (
-		<div className='w-full z-50 text-white px-8 mb-72 py-12 md:px-20'>
+		<div className='w-full z-50 overflow-hidden text-white px-8 mb-72 py-12 md:px-20'>
 			<div className='grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-gray-800 pb-12'>
 				{/* Services Section */}
 				<div className='space-y-4'>
@@ -50,6 +51,32 @@ const Services = () => {
 						))}
 					</motion.ul>
 				</div>
+			</div>
+			<div className='w-full   lg:w-1/2 mb-64 lg:mt-0 mt-44 flex justify-center items-center'>
+				<motion.div
+					initial={{ opacity: 0, y: 40 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.9, ease: 'easeOut' }}
+					className='flex flex-col gap-6 lg:gap-8'>
+					<p className='text-lg flex justify-start items-start gap-3 text-blue-200 tracking-wider uppercase font-medium'>
+						<motion.div
+							animate={{ rotate: 360 }}
+							transition={{
+								repeat: 1, // يكرر للمالانهاية
+								duration: 2, // ثانية واحدة لكل لفة
+								ease: 'linear', // عشان يلف بسرعة ثابتة من غير تباطؤ
+							}}>
+							<Image
+								width={250}
+								height={250}
+								alt='spiral'
+								className='object-cover  scale-200'
+								src='/spiral2.gif'
+							/>
+						</motion.div>
+					</p>
+				</motion.div>
 			</div>
 		</div>
 	);

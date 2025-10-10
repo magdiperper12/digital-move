@@ -14,32 +14,21 @@ export default function HeroLanding() {
 			{/* Slogan + Canvas */}
 			<div className='container mt-28 mx-auto px-4 sm:px-6 lg:px-20 py-12 flex flex-col-reverse lg:flex-row items-center justify-between'>
 				{/* Slogan */}
-				<div className='w-full lg:w-1/2 mt-10 lg:mt-0'>
+				<div className='w-full lg:w-1/2 '>
 					<Writer />
 				</div>
 				<div className='w-full lg:w-1/2 mb-64 lg:mt-0 mt-24 flex justify-center items-center'>
-					<motion.div
-						initial={{ opacity: 0, y: 40 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.9, ease: 'easeOut' }}
-						className='flex flex-col gap-6 lg:gap-8'>
+					<motion.div className='flex flex-col gap-6 lg:gap-8'>
 						<p className='text-lg flex justify-start items-start gap-3 text-blue-200 tracking-wider uppercase font-medium'>
-							<motion.div
-								animate={{ rotate: 360 }}
-								transition={{
-									repeat: Infinity, // يكرر للمالانهاية
-									duration: 2, // ثانية واحدة لكل لفة
-									ease: 'linear', // عشان يلف بسرعة ثابتة من غير تباطؤ
-								}}>
+							<div>
 								<Image
-									width={250}
-									height={250}
+									width={300}
+									height={300}
 									alt='spiral'
-									className='object-cover scale-200'
-									src='/spiral.webp'
+									className='object-cover scale-150'
+									src='/heroke.gif'
 								/>
-							</motion.div>
+							</div>
 						</p>
 					</motion.div>
 				</div>
