@@ -38,14 +38,14 @@ export default function LandingHero() {
 								About Us
 							</div>
 
-							<h1 className='text-[7vw] sm:text-[5vw] lg:text-[2.5vw] leading-tight font-light text-white max-w-2xl mx-auto lg:mx-0'>
+							<h1 className='text-3xl leading-tight font-light text-white max-w-2xl mx-auto lg:mx-0'>
 								We are a Digital Technology Company Established in England 5
 								years ago. We help New Businesses Develop and Present their Work
 								in a Professional Manner that is Appropriate for the European
 								and Global Labour Market.
 							</h1>
 
-							<p className='text-sm sm:text-base lg:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0'>
+							<p className='text-lg text-gray-400 max-w-xl mx-auto lg:mx-0'>
 								DigitalMove has become a world-renowned studio trusted by many
 								businesses worldwide.
 							</p>
@@ -60,7 +60,7 @@ export default function LandingHero() {
 					viewport={{ once: true }}
 					transition={{ delay: 0.3, duration: 0.8 }}
 					className='flex items-center  justify-center lg:justify-between mt-10'>
-					<p className='text-sm sm:text-base text-gray-400'>
+					<p className='text-base text-gray-400'>
 						DigitalMove has become a world-renowned studio
 					</p>
 					<SmallIcon />

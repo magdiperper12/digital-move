@@ -181,13 +181,6 @@ const InfiniteMarquee: React.FC = () => {
 					<div
 						key={idx}
 						className='flex flex-col items-center'>
-						{/* <Image
-              src={partner.icon}
-              alt={partner.text}
-              width={80}
-              height={80}
-              className="object-contain"
-            /> */}
 						<span className='text-sm text-gray-400 mt-2'>{partner.text}</span>
 					</div>
 				))}

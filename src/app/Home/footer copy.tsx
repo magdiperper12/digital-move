@@ -21,12 +21,12 @@ const Services = () => {
 		<div className='w-full z-50 overflow-hidden mb-72 text-white px-6 sm:px-10 lg:px-20 py-12 flex flex-col lg:flex-row items-center lg:items-start gap-16'>
 			{/* Services Section */}
 			<div className='w-full lg:w-1/2 space-y-6'>
-				<h2 className='text-3xl sm:text-4xl lg:text-6xl font-bold tracking-wider bg-gradient-to-r from-gray-50 to-gray-400 bg-clip-text text-transparent'>
+				<h2 className='text-5xl lg:text-6xl font-bold tracking-wider bg-gradient-to-r from-gray-50 to-gray-400 bg-clip-text text-transparent'>
 					SERVICES<span className='text-indigo-50'>.</span>
 				</h2>
 
 				<motion.ul
-					className='space-y-3 text-lg sm:text-xl font-semibold text-gray-200'
+					className='space-y-3 text-xl font-semibold text-gray-200'
 					variants={listVariants}
 					initial='hidden'
 					whileInView='visible'

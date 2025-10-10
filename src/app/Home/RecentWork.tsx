@@ -20,7 +20,7 @@ export default function RecentWork() {
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8, ease: 'easeOut' }}
 				viewport={{ once: false, amount: 0.3 }}
-				className='text-4xl sm:text-6xl md:text-7xl font-extrabold mb-10 sm:mb-16 text-center'>
+				className='text-5xl  md:text-7xl font-extrabold mb-20 mt-32 text-start '>
 				RECENT{' '}
 				<span className='text-gradient bg-gradient-to-r from-gray-50 to-gray-500 bg-clip-text text-transparent'>
 					WORK
