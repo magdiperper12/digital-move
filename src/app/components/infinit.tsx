@@ -45,7 +45,7 @@ const Infinite: React.FC = () => {
 						<div
 							key={index}
 							className='flex items-center text-white gap-2 px-4 min-w-max uppercase tracking-wide cursor-pointer'>
-							<span className='text-4xl'>{item.text}</span>
+							<span className='text-5xl'>{item.text}</span>
 						</div>
 					))}
 				</motion.div>

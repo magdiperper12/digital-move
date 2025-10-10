@@ -17,7 +17,7 @@ export default function HeroLanding() {
 				<div className='w-full lg:w-1/2 mt-10 lg:mt-0'>
 					<Writer />
 				</div>
-				<div className='w-full lg:w-1/2 mt-10 lg:mt-0 my-72 flex justify-center items-center'>
+				<div className='w-full lg:w-1/2 mb-64 lg:mt-0 mt-24 flex justify-center items-center'>
 					<motion.div
 						initial={{ opacity: 0, y: 40 }}
 						whileInView={{ opacity: 1, y: 0 }}
@@ -48,9 +48,9 @@ export default function HeroLanding() {
 			{/* WhatsApp Floating Button */}
 			<motion.a
 				href='https://wa.me/201060725330?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85'
-				className='fixed animate-bounce bottom-12 right-12 z-50 bg-green-500 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center shadow-2xl transition-transform duration-200 hover:scale-110'
+				className='fixed animate-bounce bottom-12 right-12 z-50 bg-green-500 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-transform duration-200 hover:scale-110'
 				aria-label='write'>
-				<FaWhatsapp className='text-2xl sm:text-3xl lg:text-4xl' />
+				<FaWhatsapp className='text-4xl' />
 			</motion.a>
 		</div>
 	);

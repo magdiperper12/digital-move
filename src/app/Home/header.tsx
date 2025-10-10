@@ -1,32 +1,74 @@
-"use client";
+'use client';
 
 // import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
-import Image from "next/image";
-import MobileMenu from "../components/mobileMenu";
+import React from 'react';
+import Image from 'next/image';
+import MobileMenu from '../components/mobileMenu';
+
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Header = () => {
-  return (
-    <div className="w-full p-3  fixed top-0 left-0  z-50 ">
-      <header className=" backdrop-blur-md shadow-md  rounded-2xl ">
-        <div className="flex items-center justify-between px-4 sm:px-6 md:px-10 ">
-          {/* Logo */}
-          <div className="flex-shrink-0 w-24 h-24  relative">
-            <Image
-              src="/image/dglogo.png"
-              alt="Digital Mov"
-              fill
-              priority
-              className="object-contain scale-150"
-            />
-          </div>
-          <div className="flex-shrink-0  w-24 h-24    flex  items-center justify-center ">
-            <MobileMenu />
-          </div>
-        </div>
-      </header>
-    </div>
-  );
+	const [isOpen, setIsOpen] = useState(false);
+	return (
+		<div className='w-full p-3  fixed -top-3 left-0  z-50 '>
+			<header className=' backdrop-blur-md shadow-md  rounded-2xl '>
+				<div className='flex items-center justify-between px-4 sm:px-6 md:px-10 '>
+					{/* Logo */}
+					<div className='flex-shrink-0 w-24 h-24  relative'>
+						<Image
+							src='/image/dglogo.png'
+							alt='Digital Mov'
+							fill
+							priority
+							className='object-contain scale-150'
+						/>
+					</div>
+					<div
+						onClick={() => setIsOpen(true)}
+						className='flex-shrink-0  w-24 h-24    flex  items-center justify-center '>
+						<MobileMenu />
+					</div>
+					<AnimatePresence>
+						{isOpen && (
+							<motion.div
+								initial={{ x: '100%' }}
+								animate={{ x: 0 }}
+								exit={{ x: '100%' }}
+								transition={{ duration: 0.4, ease: 'easeInOut' }}
+								className='fixed top-0 right-0 w-full h-screen bg-black/90 text-white flex flex-col items-center justify-center z-[999]'>
+								{/* زرار غلق */}
+								<button
+									onClick={() => setIsOpen(false)}
+									className='absolute top-6 right-6 text-3xl font-bold'>
+									✕
+								</button>
+
+								{/* اللينكات */}
+								<nav className='flex flex-col gap-8 text-3xl font-semibold'>
+									<a
+										href='/Home'
+										onClick={() => setIsOpen(false)}>
+										Home
+									</a>
+									<a
+										href='/about'
+										onClick={() => setIsOpen(false)}>
+										About
+									</a>
+									<a
+										href='/what-we-do'
+										onClick={() => setIsOpen(false)}>
+										what we do
+									</a>
+								</nav>
+							</motion.div>
+						)}
+					</AnimatePresence>
+				</div>
+			</header>
+		</div>
+	);
 };
 
 export default Header;

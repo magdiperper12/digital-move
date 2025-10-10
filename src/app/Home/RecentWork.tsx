@@ -23,8 +23,11 @@ export default function RecentWork() {
 				transition={{ duration: 0.8, ease: 'easeOut' }}
 				viewport={{ once: false, amount: 0.3 }}
 				className='text-4xl sm:text-6xl md:text-7xl font-extrabold mb-10 sm:mb-16 text-center'>
-				RECENT <span className='text-white'>WORK</span>
-				<span className='text-red-500'>.</span>
+				RECENT{' '}
+				<span className='text-gradient bg-gradient-to-r from-gray-50 to-gray-500 bg-clip-text text-transparent'>
+					WORK
+				</span>
+				<span className='text-gray-500'>.</span>
 			</motion.h2>
 
 			{/* Gallery */}

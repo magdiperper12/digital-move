@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function LandingHero() {
 	return (
-		<main className='min-h-screen w-full bg-[#0b0f1a] text-white overflow-hidden flex items-center'>
+		<main className='min-h-screen w-full bg-[#000002] text-white overflow-hidden flex items-center'>
 			<div className='container mx-auto px-4 sm:px-6 lg:px-16 py-12 sm:py-16 lg:py-20'>
 				{/* النصوص والكورة */}
 				<div className='flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20'>
