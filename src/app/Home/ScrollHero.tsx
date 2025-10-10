@@ -1,10 +1,8 @@
 'use client';
 
-import React, { Suspense, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import React, { useRef } from 'react';
+
 import { motion, useScroll, useTransform } from 'framer-motion';
-import * as THREE from 'three';
 
 type Card = {
 	id: number;
@@ -50,31 +48,6 @@ const CARDS: Card[] = [
 	},
 ];
 
-function BackgroundBlob() {
-	const ref = useRef<THREE.Mesh>(null);
-	useFrame(({ clock }) => {
-		if (!ref.current) return;
-		ref.current.rotation.y = clock.getElapsedTime() * 0.08;
-		ref.current.scale.x = 1 + Math.sin(clock.getElapsedTime() * 0.6) * 0.05;
-		ref.current.scale.y = 1 + Math.cos(clock.getElapsedTime() * 0.6) * 0.05;
-	});
-
-	return (
-		<mesh
-			ref={ref}
-			position={[-1.5, 0, -2]}>
-			<icosahedronGeometry args={[1.6, 32]} />
-			<meshStandardMaterial
-				color={'#fff'}
-				roughness={0.6}
-				metalness={0.2}
-				transparent
-				opacity={0.18}
-			/>
-		</mesh>
-	);
-}
-
 export default function ScrollHero() {
 	const targetRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({
@@ -89,26 +62,6 @@ export default function ScrollHero() {
 		<section
 			ref={targetRef}
 			className='relative scale-90 md:scale-100 h-[300vh] text-white'>
-			{/* THREEJS Background */}
-			<div className='absolute inset-0  -z-10 pointer-events-none'>
-				<Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
-					<ambientLight intensity={0.6} />
-					<directionalLight
-						position={[5, 5, 5]}
-						intensity={0.6}
-					/>
-					<Suspense fallback={null}>
-						<BackgroundBlob />
-					</Suspense>
-					<OrbitControls
-						enablePan={false}
-						enableZoom={false}
-						autoRotate
-						autoRotateSpeed={0.2}
-					/>
-				</Canvas>
-			</div>
-
 			{/* Scroll Container */}
 			<div className='sticky top-0 h-screen flex items-center overflow-hidden'>
 				<motion.div

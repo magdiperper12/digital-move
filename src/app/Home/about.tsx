@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-// import { Canvas } from '@react-three/fiber';
-// import { OrbitControls, MeshWobbleMaterial } from '@react-three/drei';
+
 import Image from 'next/image';
 
 export default function LandingHero() {
@@ -20,7 +19,7 @@ export default function LandingHero() {
 							viewport={{ once: true }}
 							transition={{ duration: 0.9, ease: 'easeOut' }}
 							className='flex flex-col gap-6 lg:gap-8'>
-							<p className='text-lg flex justify-start items-start gap-3 text-blue-200 tracking-wider uppercase font-medium'>
+							<div className='text-lg flex justify-start items-start gap-3 text-blue-200 tracking-wider uppercase font-medium'>
 								<motion.div
 									animate={{ rotate: 360 }}
 									transition={{
@@ -37,7 +36,7 @@ export default function LandingHero() {
 									/>
 								</motion.div>
 								About Us
-							</p>
+							</div>
 
 							<h1 className='text-[7vw] sm:text-[5vw] lg:text-[2.5vw] leading-tight font-light text-white max-w-2xl mx-auto lg:mx-0'>
 								We are a Digital Technology Company Established in England 5
@@ -52,29 +51,6 @@ export default function LandingHero() {
 							</p>
 						</motion.div>
 					</div>
-
-					{/* الكورة right */}
-					{/* <motion.div
-						initial={{ opacity: 0, scale: 0.8 }}
-						whileInView={{ opacity: 1, scale: 1 }}
-						viewport={{ once: true }}
-						transition={{ duration: 1, ease: 'easeOut' }}
-						className='flex-1 w-full h-[300px] sm:h-[400px] lg:h-[500px]'>
-						<Canvas camera={{ position: [0, 0, 8], fov: 50 }}>
-							<ambientLight intensity={0.6} />
-							<directionalLight
-								position={[5, 5, 5]}
-								intensity={0.6}
-							/>
-							<FloatingBlob />
-							<OrbitControls
-								enableZoom={false}
-								enablePan={false}
-								autoRotate
-								autoRotateSpeed={0.8}
-							/>
-						</Canvas>
-					</motion.div> */}
 				</div>
 
 				{/* النص أسفل الصفحة */}
@@ -93,21 +69,6 @@ export default function LandingHero() {
 		</main>
 	);
 }
-
-// function FloatingBlob() {
-// 	return (
-// 		<mesh scale={[3, 3, 3]}>
-// 			<sphereGeometry args={[1, 128, 64]} />
-// 			<MeshWobbleMaterial
-// 				color='#273092'
-// 				factor={0.9}
-// 				speed={2}
-// 				roughness={0.3}
-// 				metalness={0.3}
-// 			/>
-// 		</mesh>
-// 	);
-// }
 
 function SmallIcon() {
 	return (
