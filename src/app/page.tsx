@@ -17,13 +17,13 @@ export default function Splash() {
 	}, [router]);
 
 	return (
-		<main className='relative flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-b from-[#000000]   to-[#000041]'>
+		<main className='relative flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-b from-[#000000]   to-[#000058]'>
 			{/* موجات مائية */}
 			<div className='absolute inset-0 flex items-center justify-center'>
 				{[...Array(3)].map((_, i) => (
 					<motion.div
 						key={i}
-						className='absolute rounded-full bg-blue-600 backdrop-blur-md'
+						className='absolute rounded-full bg-blue-700 backdrop-blur-md'
 						initial={{ scale: 0, opacity: 0.8 }}
 						animate={{ scale: 6, opacity: 0 }}
 						transition={{
