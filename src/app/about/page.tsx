@@ -77,7 +77,7 @@ const AboutPage: React.FC = () => {
 				whileInView='visible'
 				viewport={{ once: true }}
 				style={{ y }}
-				className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 w-full max-w-5xl'>
+				className='grid grid-cols-1 lg:mb-24 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 w-full max-w-5xl'>
 				{services.map((service, i) => (
 					<motion.div
 						key={service}

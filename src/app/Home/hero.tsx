@@ -17,9 +17,9 @@ export default function HeroLanding() {
 				<div className='w-full lg:w-1/2 '>
 					<Writer />
 				</div>
-				<div className='w-full lg:w-1/2 mb-64 lg:mt-0 mt-24 flex justify-center items-center'>
+				<div className='w-full lg:w-1/2 mb-56 px-6 pt-24 flex justify-center items-center'>
 					<motion.div className='flex flex-col gap-6 lg:gap-8'>
-						<div className='text-lg flex justify-start items-start gap-3 text-blue-200 tracking-wider uppercase font-medium'>
+						<div className='text-lg flex px-5 justify-start items-start gap-3 text-blue-200 tracking-wider uppercase font-medium'>
 							<div>
 								<Image
 									width={300}

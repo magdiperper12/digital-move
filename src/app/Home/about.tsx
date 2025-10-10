@@ -59,7 +59,7 @@ export default function LandingHero() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ delay: 0.3, duration: 0.8 }}
-					className='flex items-center justify-center lg:justify-between mt-10'>
+					className='flex items-center  justify-center lg:justify-between mt-10'>
 					<p className='text-sm sm:text-base text-gray-400'>
 						DigitalMove has become a world-renowned studio
 					</p>

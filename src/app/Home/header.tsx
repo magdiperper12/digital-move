@@ -3,10 +3,10 @@
 // import { AnimatePresence, motion } from "framer-motion";
 import React from 'react';
 import Image from 'next/image';
-import MobileMenu from '../components/mobileMenu';
 
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { HiOutlineMenu } from 'react-icons/hi';
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +27,9 @@ const Header = () => {
 					<div
 						onClick={() => setIsOpen(true)}
 						className='flex-shrink-0  w-24 h-24    flex  items-center justify-center '>
-						<MobileMenu />
+						<button className='p-2 rounded-lg bg-gray-900 text-white focus:outline-none'>
+							<HiOutlineMenu size={28} />
+						</button>
 					</div>
 					<AnimatePresence>
 						{isOpen && (
