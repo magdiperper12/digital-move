@@ -1,13 +1,9 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-
 import { FaWhatsapp } from 'react-icons/fa';
-// import HeroSlogan from "./We";
 import Writer from '../components/writer';
-import Image from 'next/image';
 
-// 🖼 HeroLanding Component
 export default function HeroLanding() {
 	return (
 		<div className='min-h-screen text-white relative overflow-hidden'>
@@ -17,16 +13,19 @@ export default function HeroLanding() {
 				<div className='w-full lg:w-1/2 '>
 					<Writer />
 				</div>
-				<div className='w-full lg:w-1/2 mb-56 px-6 pt-24 flex justify-center items-center'>
+
+				{/* Video Section */}
+				<div className='w-full lg:w-1/2  mb-56 px-6 pt-24 flex justify-center items-center'>
 					<motion.div className='flex flex-col gap-6 lg:gap-8'>
 						<div className='text-lg flex px-5 justify-start items-start gap-3 text-blue-200 tracking-wider uppercase font-medium'>
-							<div>
-								<Image
-									width={300}
-									height={300}
-									alt='spiral'
-									className='object-cover scale-150'
-									src='/heroke.gif'
+							<div className='rounded-full  scale-200 p-12 overflow-hidden shadow-xl'>
+								<video
+									src='/work/heros.mp4'
+									autoPlay
+									muted
+									loop
+									playsInline
+									className='object-cover  scale-100 rounded-2xl'
 								/>
 							</div>
 						</div>

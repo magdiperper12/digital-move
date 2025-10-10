@@ -16,7 +16,7 @@ const Writer: FC = () => {
 					cursorStyle='|'
 					typeSpeed={70}
 					deleteSpeed={50}
-					delaySpeed={1500}
+					delaySpeed={5000}
 				/>
 			</h1>
 		</main>

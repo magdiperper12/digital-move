@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const Services = () => {
 	const listVariants = {
@@ -48,16 +47,17 @@ const Services = () => {
 			</div>
 
 			{/* Spiral Animation Section */}
-			<div className='w-full lg:w-1/2   flex justify-center items-center'>
+			<div className='w-full lg:w-1/2 flex justify-center items-center'>
 				<div className='flex flex-col gap-6 lg:gap-10'>
-					<div className='text-lg rounded-full scale-125 my-12 overflow-hidden flex justify-center lg:justify-start items-center gap-3 text-blue-200 tracking-wider uppercase font-medium'>
+					<div className='text-lg rounded-3xl scale-125 my-12 overflow-hidden flex justify-center lg:justify-start items-center gap-3 text-blue-200 tracking-wider uppercase font-medium'>
 						<div>
-							<Image
-								width={250}
-								height={250}
-								alt='spiral'
-								className='object-contain scale-200'
-								src='/spiral2.gif'
+							<video
+								src='/work/service.mp4'
+								autoPlay
+								loop
+								muted
+								playsInline
+								className='object-contain w-[250px] h-[250px] scale-200 rounded-full'
 							/>
 						</div>
 					</div>
