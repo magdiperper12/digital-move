@@ -8,10 +8,10 @@ const Writer: FC = () => {
 
 	return (
 		<main className='flex -mt-20 md:mt-0 items-center justify-center px-4'>
-			<h1 className='text-center text-4xl  font-bold text-gradient bg-gradient-to-r from-gray-50 to-gray-500 bg-clip-text text-transparent'>
+			<h1 className='text-center text-4xl font-bold text-gradient bg-gradient-to-r from-gray-50 to-gray-500 bg-clip-text text-transparent'>
 				<Typewriter
 					words={[title]}
-					loop={0} // 0 معناها مرة واحدة بس
+					loop={1} // مرة واحدة فقط
 					cursor
 					cursorStyle='|'
 					typeSpeed={120}
