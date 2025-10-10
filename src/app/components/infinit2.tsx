@@ -7,8 +7,8 @@ interface Partner {
 	text: string;
 }
 
-const Infinite: React.FC = () => {
-	// ✅ استخدم useMemo علشان ميعملش re-init كل render
+const Infiniterev: React.FC = () => {
+	// ✅ بيانات ثابتة
 	const infinitData = useMemo<Partner[]>(
 		() => [
 			{ text: 'Digital Business Card' },
@@ -27,15 +27,15 @@ const Infinite: React.FC = () => {
 		if (marqueeRef.current) {
 			setWidth(marqueeRef.current.scrollWidth / 2);
 		}
-	}, [infinitData]); // ✅ دلوقتي infinitData ثابت مش هيتغير
+	}, [infinitData]);
 
 	return (
 		<div className='text-center'>
-			<div className='w-full overflow-hidden  bg-black/20  backdrop-blur-md   '>
+			<div className='w-full overflow-hidden bg-black/20 backdrop-blur-md   '>
 				<motion.div
 					ref={marqueeRef}
 					className='flex whitespace-nowrap gap-10 text-primary dark:text-secoundry text-lg font-medium'
-					animate={{ x: [-width, 0] }}
+					animate={{ x: [0, -width] }} // ✅ يتحرك من اليمين للشمال
 					transition={{
 						duration: 30,
 						ease: 'linear',
@@ -54,4 +54,4 @@ const Infinite: React.FC = () => {
 	);
 };
 
-export default Infinite;
+export default Infiniterev;
