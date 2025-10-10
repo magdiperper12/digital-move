@@ -1,16 +1,14 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const works = [
-	'/image/image.jpg',
-	'/image/image.jpg',
-	'/image/image.jpg',
-	'/image/image.jpg',
-	'/image/image.jpg',
-	'/image/image.jpg',
+	'/work/work1.mp4',
+	'/work/work2.mp4',
+	'/work/work3.mp4',
+	'/work/work4.mp4',
+	'/work/work5.mp4',
 ];
 
 export default function RecentWork() {
@@ -35,80 +33,52 @@ export default function RecentWork() {
 				{works.map((src, i) => {
 					const isEven = i % 2 === 0;
 
+					const VideoCard = (
+						<motion.div
+							initial={{
+								opacity: 0,
+								scale: 0.9,
+								y: 40,
+								filter: 'blur(15px)',
+							}}
+							whileInView={{
+								opacity: 1,
+								scale: 1,
+								y: 0,
+								filter: 'blur(0px)',
+							}}
+							transition={{
+								delay: 0.1,
+								duration: 0.7,
+								ease: 'easeOut',
+							}}
+							viewport={{ once: false, amount: 0.3 }}
+							className='relative w-full h-80  rounded-xl overflow-hidden shadow-xl group'>
+							<video
+								src={src}
+								autoPlay
+								loop
+								muted
+								playsInline
+								className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-110'
+							/>
+							<div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500' />
+						</motion.div>
+					);
+
 					return (
 						<div
 							key={i}
 							className='grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl mx-auto items-center'>
-							{/* Even case */}
 							{isEven ? (
 								<>
-									{/* Image */}
-									<motion.div
-										initial={{
-											opacity: 0,
-											scale: 0.9,
-											y: 40,
-											filter: 'blur(15px)',
-										}}
-										whileInView={{
-											opacity: 1,
-											scale: 1,
-											y: 0,
-											filter: 'blur(0px)',
-										}}
-										transition={{
-											delay: 0.1,
-											duration: 0.7,
-											ease: 'easeOut',
-										}}
-										viewport={{ once: false, amount: 0.3 }}
-										className='relative w-full h-56 sm:h-72 rounded-xl overflow-hidden shadow-xl group'>
-										<Image
-											src={src}
-											alt={`work-${i}`}
-											fill
-											className='object-cover transition-transform duration-700 group-hover:scale-110'
-										/>
-										<div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500' />
-									</motion.div>
-
-									{/* Empty div (only desktop) */}
+									{VideoCard}
 									<div className='hidden md:block w-full h-72 rounded-xl bg-transparent'></div>
 								</>
 							) : (
 								<>
-									{/* Empty div (only desktop) */}
 									<div className='hidden md:block w-full h-72 rounded-xl bg-transparent'></div>
-
-									{/* Image */}
-									<motion.div
-										initial={{
-											opacity: 0,
-											scale: 0.9,
-											y: 40,
-											filter: 'blur(15px)',
-										}}
-										whileInView={{
-											opacity: 1,
-											scale: 1,
-											y: 0,
-											filter: 'blur(0px)',
-										}}
-										transition={{
-											delay: 0.1,
-											duration: 0.7,
-											ease: 'easeOut',
-										}}
-										viewport={{ once: false, amount: 0.3 }}
-										className='relative w-full h-56 sm:h-72 rounded-xl overflow-hidden shadow-xl group'>
-										<Image
-											src={src}
-											alt={`work-${i}`}
-											fill
-											className='object-cover transition-transform duration-700 group-hover:scale-110'
-										/>
-										<div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500' />
-									</motion.div>
+									{VideoCard}
 								</>
 							)}
 						</div>

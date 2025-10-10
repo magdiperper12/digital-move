@@ -11,9 +11,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<div className='w-full p-3  fixed -top-3 left-0  z-50 '>
+		<div className='w-full   fixed -top-3 left-0  z-50 '>
 			<header className=' backdrop-blur-md shadow-md  rounded-2xl '>
-				<div className='flex items-center justify-between px-4 sm:px-6 md:px-10 '>
+				<div className='flex items-center justify-between  p-3 '>
 					{/* Logo */}
 					<div className='flex-shrink-0 w-24 h-24  relative'>
 						<Image
@@ -36,7 +36,7 @@ const Header = () => {
 								animate={{ x: 0 }}
 								exit={{ x: '100%' }}
 								transition={{ duration: 0.4, ease: 'easeInOut' }}
-								className='fixed top-0 right-0 w-full h-screen bg-black/90 text-white flex flex-col items-center justify-center z-[999]'>
+								className='fixed top-0 right-0 w-full h-screen bg-black text-white flex flex-col items-center justify-center z-[999]'>
 								{/* زرار غلق */}
 								<button
 									onClick={() => setIsOpen(false)}
