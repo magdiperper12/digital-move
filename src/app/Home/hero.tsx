@@ -10,12 +10,9 @@ export default function HeroLanding() {
 			{/* Slogan + Canvas */}
 			<div className='container mt-28 mx-auto px-4 sm:px-6 lg:px-20 py-12 flex flex-col-reverse lg:flex-row items-center justify-between'>
 				{/* Slogan */}
-				<div className='w-full lg:w-1/2 '>
-					<Writer />
-				</div>
 
 				{/* Video Section */}
-				<div className='w-full lg:w-1/2  mb-56 px-6 pt-24 flex justify-center items-center'>
+				<div className='w-full lg:w-1/2  mb-32 px-6 pt-32 flex justify-center items-center'>
 					<motion.div className='flex flex-col gap-6 lg:gap-8'>
 						<div className='text-lg flex px-5 justify-start items-start gap-3 text-blue-200 tracking-wider uppercase font-medium'>
 							<div className='rounded-full  scale-200 p-12 overflow-hidden shadow-xl'>
@@ -30,6 +27,9 @@ export default function HeroLanding() {
 							</div>
 						</div>
 					</motion.div>
+				</div>
+				<div className='w-full lg:w-1/2 '>
+					<Writer />
 				</div>
 			</div>
 

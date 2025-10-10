@@ -7,8 +7,8 @@ const Writer: FC = () => {
 	const title: string = 'Develop your Business with Digital Technology';
 
 	return (
-		<main className='flex -mt-20 md:mt-0 items-center justify-center px-4'>
-			<h1 className='text-center text-4xl font-bold text-gradient bg-gradient-to-r from-gray-50 to-gray-500 bg-clip-text text-transparent'>
+		<main className='flex mt-10 items-center justify-center px-4'>
+			<h1 className='text-center text-3xl font-bold text-gradient bg-gradient-to-r from-gray-50 to-gray-500 bg-clip-text text-transparent'>
 				<Typewriter
 					words={[title]}
 					loop={1} // مرة واحدة فقط
