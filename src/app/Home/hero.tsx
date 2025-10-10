@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa';
 import Writer from '../components/writer';
 
 export default function HeroLanding() {
