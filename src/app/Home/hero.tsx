@@ -34,12 +34,6 @@ export default function HeroLanding() {
 			</div>
 
 			{/* WhatsApp Floating Button */}
-			<motion.a
-				href='https://wa.me/201060725330?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85'
-				className='fixed animate-bounce bottom-12 right-12 z-50 bg-green-500 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-transform duration-200 hover:scale-110'
-				aria-label='write'>
-				<FaWhatsapp className='text-4xl' />
-			</motion.a>
 		</div>
 	);
 }

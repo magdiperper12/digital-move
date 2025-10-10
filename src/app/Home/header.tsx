@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { HiOutlineMenu } from 'react-icons/hi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -24,16 +25,25 @@ const Header = () => {
 							className='object-contain scale-150'
 						/>
 					</div>
-					<div
-						onClick={() => setIsOpen(true)}
-						className='flex-shrink-0  w-28 h-28    flex  items-center justify-center '>
-						<button className='p-2 scale-110 rounded-lg bg-gray-900 text-white focus:outline-none'>
-							<HiOutlineMenu
-								size={28}
-								className=''
-							/>
-						</button>
+					<div className='flex justify-end items-center  -mr-4'>
+						<motion.a
+							href='https://wa.me/201060725330?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85'
+							className='   bg-green-500 -mr-3 w-8 h-8 rounded-full flex items-center justify-center shadow-2xl transition-transform duration-200 hover:scale-110'
+							aria-label='write'>
+							<FaWhatsapp className='text-4xl text-white' />
+						</motion.a>
+						<div
+							onClick={() => setIsOpen(true)}
+							className='flex-shrink-0  w-28 h-28    flex  items-center justify-center '>
+							<button className=' scale-110 rounded-lg bg-gray-900 text-white focus:outline-none'>
+								<HiOutlineMenu
+									size={28}
+									className=''
+								/>
+							</button>
+						</div>
 					</div>
+
 					<AnimatePresence>
 						{isOpen && (
 							<motion.div
