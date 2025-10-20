@@ -1,10 +1,9 @@
 "use client";
-import { motion } from "framer-motion";
+
 import React, { useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
-import { FaWhatsapp } from "react-icons/fa";
 // import HeroSlogan from "./We";
 import Writer from "../components/writer";
 
